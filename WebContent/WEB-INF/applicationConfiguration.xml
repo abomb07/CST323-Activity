@@ -61,9 +61,9 @@
  
     <bean id="dataSource" destroy-method="close" class="org.apache.commons.dbcp2.BasicDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://td5l74lo6615qq42.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/w9e8labc8rhnjj7f" />
-        <property name="username" value="pm3iwsnf09790es4" />
-        <property name="password" value="d46bpfj16972yfox" />
+        <property name="url" value="jdbc:mysql://td5l74lo6615qq42.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/kjcbcdlh9ldcp9bk" />
+        <property name="username" value="u5t2glgc56feylqk" />
+        <property name="password" value="v13g6liky68nv4i2" />
     </bean>
     
     <!-- Setup Transaction Manager -->
