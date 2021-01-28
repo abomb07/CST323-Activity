@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div align="center">
-		<h3>CST323 Activity Application.</h3>
+		<h3>CST323 Activity Application</h3>
 		<br>
 		<form:form class="form-inline" method="POST" modelAttribute="user"
 			action="adduser">
