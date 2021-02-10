@@ -12,6 +12,7 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.SpringVersion;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -35,6 +36,7 @@ public class UserController
 	@RequestMapping(path="/", method=RequestMethod.GET)
 	public ModelAndView displayForm()
 	{
+		System.out.println(SpringVersion.getVersion());
 		return new ModelAndView("visitorForm", "user", new User("", "", ""));
 	}
 	
