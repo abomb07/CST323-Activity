@@ -17,7 +17,9 @@ import javax.sql.DataSource;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 
+import com.gcu.business.OrdersBusinessService;
 import com.gcu.model.User;
+import com.gcu.utility.MyLogger;
 
 public class OrdersDataService implements DataAccessInterface {
 
@@ -32,6 +34,8 @@ public class OrdersDataService implements DataAccessInterface {
 	@Override
 	public List findAll() {
 		// TODO Auto-generated method stub
+		MyLogger.getInstance().Info("Entering findAll method", OrdersDataService.class);
+		
 		List<User> orders = new ArrayList<User>();
 
 		String stmt = "SELECT * FROM visitor";
@@ -46,12 +50,15 @@ public class OrdersDataService implements DataAccessInterface {
 			orders.add(o1);
 		}
 
+		MyLogger.getInstance().Info("Exiting findAll method", OrdersDataService.class);
 		return orders;
 	}
 
 	@Override
 	public boolean create(User t) {
 
+		MyLogger.getInstance().Info("Entering create method", OrdersDataService.class);
+		
 		// get the current date to add to DB
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd");
 		LocalDateTime now = LocalDateTime.now();
@@ -68,6 +75,7 @@ public class OrdersDataService implements DataAccessInterface {
 
 		}
 
+		MyLogger.getInstance().Info("Exiting create method", OrdersDataService.class);
 		return false;
 	}
 }
